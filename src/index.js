@@ -1,1 +1,2 @@
-export { default as default } from './Component.svelte';
+export { default as default } from './Skeleton.svelte';
+export { default as SkeletonTheme } from './Skeleton-theme.svelte';

@@ -5,13 +5,23 @@
   "main": "dist/index.js",
   "scripts": {
     "build": "rollup -c",
-    "prepublishOnly": "npm run build"
+    "prepublishOnly": "npm run build",
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook"
   },
   "devDependencies": {
+    "@babel/core": "^7.14.8",
     "@rollup/plugin-node-resolve": "^9.0.0",
+    "@storybook/addon-actions": "^6.3.6",
+    "@storybook/addon-essentials": "^6.3.6",
+    "@storybook/addon-links": "^6.3.6",
+    "@storybook/addon-svelte-csf": "^1.1.0",
+    "@storybook/svelte": "^6.3.6",
+    "babel-loader": "^8.2.2",
     "rollup": "^2.0.0",
     "rollup-plugin-svelte": "^6.0.0",
-    "svelte": "^3.0.0"
+    "svelte": "^3.41.0",
+    "svelte-loader": "^3.1.2"
   },
   "keywords": [
     "svelte"
@@ -19,5 +29,9 @@
   "files": [
     "src",
     "dist"
-  ]
+  ],
+  "dependencies": {
+    "@emotion/core": "^11.0.0",
+    "@emotion/css": "^11.1.3"
+  }
 }
