@@ -13,7 +13,7 @@
   export { customClassName as class };
 
   let defaultBaseColor = "#eee";
-  export { defaultBaseColor as color }
+  export { defaultBaseColor as color };
 
   export const defaultHighlightColor = "#f5f5f5";
 
@@ -89,7 +89,13 @@
   {/each}
 {:else}
   {#each elements as element}
-    <span class="{element.className} {element.defaultStyles}"> &zwnj; </span>
+    <span
+      class="{element.className} {element.defaultStyles}"
+      style="width:{element.style.width}; border-radius:{element.style
+        .borderRadius}; height:{element.style.height}"
+    >
+      &zwnj;
+    </span>
   {/each}
 {/if}
 

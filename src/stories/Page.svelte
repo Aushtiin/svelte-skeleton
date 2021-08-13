@@ -42,7 +42,7 @@
     {#if loading}
       <p>
         <Skeleton count={1} duration={2}/>   
-        <Skeleton width="10" count={1} duration={2}/>   
+        <Skeleton width={120} count={1} duration={2}/>   
       </p>
       <p>
         <Skeleton count={3} duration={2}/>  
@@ -57,7 +57,7 @@
       </ul>
       <p>
         <Skeleton count={1} duration={2}/> 
-        <Skeleton count={1} width="30" duration={2}/> 
+        <Skeleton count={1} width="50" duration={2}/> 
       </p>
       <div class="tip-wrapper">
         <p>
