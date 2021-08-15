@@ -60,7 +60,7 @@
       style.borderRadius = "50%";
     }
 
-    let className = "loading-skeleton";
+    let className = "svelte-loader-skeleton";
     if (customClassName) {
       className += " " + customClassName;
       console.log(className);
