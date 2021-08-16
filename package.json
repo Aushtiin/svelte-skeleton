@@ -1,10 +1,12 @@
 {
-  "name": "Svelte-Loader-Skeleton",
+  "name": "svelte-skeleton-loader",
+  "version": "0.1.0",
   "svelte": "src/index.js",
   "module": "dist/index.mjs",
   "main": "dist/index.js",
   "scripts": {
     "build": "rollup -c",
+    "dev": "rollup -c -w",
     "prepublishOnly": "npm run build",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook"

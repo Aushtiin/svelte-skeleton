@@ -12,8 +12,7 @@
   export let circle = false;
   export { customClassName as class };
 
-  let defaultBaseColor = "#eee";
-  export { defaultBaseColor as color };
+  export const defaultBaseColor = "#eee";
 
   export const defaultHighlightColor = "#f5f5f5";
 

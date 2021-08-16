@@ -1,4 +1,4 @@
-# Svelte-Loader-Skeleton
+# Svelte-Skeleton-Loader
 
 Make beautiful, animated loading skeletons that automatically adapt to your app.
 Written for svelte from [react-loading-skeleton](https://github.com/dvtng/react-loading-skeleton)
