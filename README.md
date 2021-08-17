@@ -65,7 +65,7 @@ In addition to keeping the styling in-sync, here are some other reasons to do th
 ## Theming
 
 Using a `<SkeletonTheme>` component, you can easily change the colors of all
-skeleton components below it in the React hierarchy:
+skeleton components below it in the Svelte hierarchy:
 
 ```javascript
 <script>
