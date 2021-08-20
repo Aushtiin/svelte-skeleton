@@ -1,9 +1,10 @@
 {
   "name": "svelte-skeleton-loader",
-  "version": "0.1.1",
+  "version": "0.1.3",
   "svelte": "src/index.js",
   "module": "dist/index.mjs",
   "main": "dist/index.js",
+  "url": "https://github.com/Aushtiin/svelte-skeleton/issues",
   "scripts": {
     "build": "rollup -c",
     "dev": "rollup -c -w",
@@ -21,8 +22,6 @@
     "@storybook/svelte": "^6.3.6",
     "@testing-library/jest-dom": "^5.14.1",
     "@testing-library/svelte": "^3.0.3",
-    "babel-jest": "^27.0.6",
-    "babel-loader": "^8.2.2",
     "jest": "^27.0.6",
     "rollup": "^2.0.0",
     "rollup-plugin-svelte": "^6.0.0",
@@ -31,17 +30,23 @@
     "svelte-loader": "^3.1.2"
   },
   "keywords": [
-    "svelte"
+    "svelte",
+    "skeleton",
+    "skeleton-loader",
+    "loading-skeleton"
   ],
   "files": [
     "src",
     "dist"
   ],
   "dependencies": {
-    "@emotion/core": "^11.0.0",
     "@emotion/css": "^11.1.3"
   },
   "setupFilesAfterEnv": [
     "@testing-library/jest-dom/extend-expect"
-  ]
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Aushtiin/svelte-skeleton"
+  }
 }
