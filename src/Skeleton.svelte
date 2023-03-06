@@ -62,7 +62,7 @@
     let className = "svelte-loader-skeleton";
     if (customClassName) {
       className += " " + customClassName;
-      console.log(className);
+      // console.log(className);
     }
     elements.push({
       className: className,
