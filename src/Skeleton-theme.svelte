@@ -10,7 +10,7 @@
   export let highlightColor = defaultHighlightColor;
 
   const themeStyles = css`
-    .loading-skeleton {
+    .svelte-loader-skeleton {
       background-color: ${color};
       background-image: linear-gradient(
         90deg,

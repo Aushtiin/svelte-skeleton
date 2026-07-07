@@ -7,11 +7,11 @@ Written for svelte from [react-loading-skeleton](https://github.com/dvtng/react-
 
 ## Basic usage
 
-Install by `npm`/`yarn` with `svelte-loading-skeleton`.
+Install by `npm`/`yarn` with `svelte-skeleton-loader`.
 
 ```javascript
 <script>
-  import Skeleton from 'svelte-loading-skeleton';
+  import Skeleton from 'svelte-skeleton-loader';
 </script>
 
 <Skeleton/> // Simple, single-line loading skeleton
@@ -32,7 +32,7 @@ For example:
 
 ```javascript
 <script>
-  import Skeleton from 'svelte-loading-skeleton';
+  import Skeleton from 'svelte-skeleton-loader';
 </script>
 
 <div style="font-size: 20; line-height:2;">
@@ -69,7 +69,7 @@ skeleton components below it in the Svelte hierarchy:
 
 ```javascript
 <script>
-import Skeleton, { SkeletonTheme } from "react-loading-skeleton";
+import Skeleton, { SkeletonTheme } from "svelte-skeleton-loader";
 </script>
 
 <SkeletonTheme color="#202020" highlightColor="#444">
@@ -155,6 +155,17 @@ Prop for wrap the skeleton in a custom component.
 ```
 
 Prop for making the skeleton look like a circle, for when you are creating a user card with a profile picture for instance.
+
+## Color
+
+`color`: String, defaults to "#eee"
+`highlightColor`: String, defaults to "#f5f5f5"
+
+```javascript
+<Skeleton color="#3b2f63" highlightColor="#7a6bb0" />
+```
+
+Base and highlight colors of a single skeleton. To recolor every skeleton in a subtree, use `<SkeletonTheme>` instead (see Theming above).
 
 <!-- ## Style
 
