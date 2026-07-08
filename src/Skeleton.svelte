@@ -2,6 +2,10 @@
   import createEmotion from "@emotion/css/create-instance";
   const { css, keyframes } = createEmotion({ key: "some-key" });
 
+  export const defaultBaseColor = "#eee";
+
+  export const defaultHighlightColor = "#f5f5f5";
+
   let customClassName = "";
   let Wrapper = null;
   export let count = 1;
@@ -11,10 +15,8 @@
   export let height = null;
   export let circle = false;
   export { customClassName as class };
-
-  export const defaultBaseColor = "#eee";
-
-  export const defaultHighlightColor = "#f5f5f5";
+  export let color = defaultBaseColor;
+  export let highlightColor = defaultHighlightColor;
 
   export const skeletonKeyframes = keyframes`
   0% {
@@ -26,12 +28,12 @@
 `;
 
   export const skeletonStyles = css`
-    background-color: ${defaultBaseColor};
+    background-color: ${color};
     background-image: linear-gradient(
       90deg,
-      ${defaultBaseColor},
-      ${defaultHighlightColor},
-      ${defaultBaseColor}
+      ${color},
+      ${highlightColor},
+      ${color}
     );
     background-size: 200px 100%;
     background-repeat: no-repeat;
@@ -62,12 +64,19 @@
     let className = "svelte-loader-skeleton";
     if (customClassName) {
       className += " " + customClassName;
-      console.log(className);
     }
+    const styleString = [
+      style.width ? `width:${style.width}` : null,
+      style.height ? `height:${style.height}` : null,
+      style.borderRadius ? `border-radius:${style.borderRadius}` : null,
+    ]
+      .filter(Boolean)
+      .join("; ");
+
     elements.push({
       className: className,
       defaultStyles: skeletonStyles,
-      style,
+      style: styleString,
     });
   }
 </script>
@@ -77,9 +86,8 @@
     <span>
       <svelte:component this={Wrapper}>
         <span
-          class="{`element.className`} {element.defaultStyles}"
-          style="width:{element.style.width}; border-radius:{element.style
-            .borderRadius}; height:{element.style.height}"
+          class="{element.className} {element.defaultStyles}"
+          style={element.style}
         >
           &zwnj;
         </span>
@@ -90,8 +98,7 @@
   {#each elements as element}
     <span
       class="{element.className} {element.defaultStyles}"
-      style="width:{element.style.width}; border-radius:{element.style
-        .borderRadius}; height:{element.style.height}"
+      style={element.style}
     >
       &zwnj;
     </span>
